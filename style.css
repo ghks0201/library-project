@@ -1,0 +1,62 @@
+body {
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 1.2rem;
+    margin: auto;
+    width: 80%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 50px 20px;
+}
+
+form div {
+    display: flex;
+    justify-content: space-between;
+}
+
+form div div {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputText {
+    flex-basis: 25%;
+}
+
+.inputNumber {
+    flex-basis: 5%;
+}
+
+/* .checkBox {
+    margin-left: -20px;
+} */
+
+input {
+    margin-top: 5px;
+    padding: 5px 0;
+}
+
+input[type=text] {
+    width: 100%;
+}
+
+input[type=number] {
+    width: 100%;
+}
+
+input[type=checkbox] {
+    transform: scale(2);
+}
+
+.submitButton {
+    padding: 5px 24px;
+    width: 10%;
+}
+
+.hidden {
+    display: none;
+}
