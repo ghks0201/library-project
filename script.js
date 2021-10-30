@@ -1,4 +1,4 @@
-const main = document.querySelector("main")
+const library = document.querySelector(".library")
 const p = document.querySelector("p")
 const form = document.querySelector("form")
 const submitButton = document.querySelector(".submitButton")
@@ -25,7 +25,7 @@ function addBookToLibrary(newBook) {
 
 function showLibrary(newBook) {
     const div = document.createElement("div")
-    main.appendChild(div)
+    library.appendChild(div)
     div.classList.add("book")
     for (key in newBook) {
         if (key === "read") {
@@ -51,16 +51,17 @@ function showLibrary(newBook) {
                 }
             })
         }
+        else if (key === "pages") {
+            const text = document.createElement("p")
+            div.appendChild(text)
+            text.textContent = `${newBook[key]} pages`
+        }
         else {
             const text = document.createElement("p")
             div.appendChild(text)
             text.textContent = newBook[key]
         }
     }
-}
-
-function enterBook() {
-    form.classList.toggle("hidden")
 }
 
 function removeButton() {
