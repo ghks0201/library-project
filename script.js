@@ -77,6 +77,7 @@ function removeButton() {
                 const removeButton = document.querySelectorAll(".removeButton")
                 removeButton[i].addEventListener("click", () => {
                     removeButton[i].parentElement.remove()
+                    myLibrary.splice(i, 1)
                 })
             }
         }
@@ -92,5 +93,3 @@ form.addEventListener("submit", (event) => {
     showLibrary(newBook)
     removeButton()
 })
-
-
